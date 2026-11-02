@@ -99,7 +99,7 @@ https://www.microsoft.com/software-download/windows11
 *Figure 4. Official Windows 11 download page used to prepare installation media.*
 
 <img width="618" height="232" alt="image" src="https://github.com/user-attachments/assets/3fcae57c-6c2e-4fae-aa98-56bb1499efbd" />
-<img width="832" height="472" alt="image" src="https://github.com/user-attachments/assets/6f0a941b-dbf2-4d55-bfcc-119c617437ba" />
+<img width="765" height="317" alt="image" src="https://github.com/user-attachments/assets/ec13e954-ae46-4619-a39e-00a495e6b090" />
 
 
 *Figure 5. Selecting the USB drive in the boot menu.*
