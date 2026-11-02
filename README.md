@@ -323,7 +323,8 @@ As the final configuration step, I opened:
 
 I checked for available Windows system and security updates.
 
-<img width="792" height="510" alt="image" src="https://github.com/user-attachments/assets/f29cc39a-dad6-4dbe-b02e-d7b3d56231ea" />
+<img width="792" height="516" alt="image" src="https://github.com/user-attachments/assets/470d18e3-55f8-4ce4-8419-17fbf0513c54" />
+
 
 *Figure 19. Windows Update check during final configuration.*
 
