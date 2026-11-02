@@ -72,7 +72,7 @@ This raised a question about SSD detection, although it did not establish that t
 
 <img width="812" height="646" alt="image" src="https://github.com/user-attachments/assets/facff172-3d6f-4945-803f-fb3edd1dded4" />
 
-<img width="582" height="345" alt="image" src="https://github.com/user-attachments/assets/55370f23-2984-4431-9fe4-32998c115c76" />
+<img width="855" height="667" alt="image" src="https://github.com/user-attachments/assets/05895298-f5c5-462c-938a-7589913d9390" />
 
 *Figure 2. Initial BIOS storage screen: M2_1 was not detected.*
 
