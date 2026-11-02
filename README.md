@@ -85,6 +85,7 @@ This raised a question about SSD detection, although it did not establish that t
 ## 3. Create Recovery Media and Check the Disk
 
 Using another computer, I downloaded Microsoft's official Windows 11 installation media tool and prepared a bootable USB drive.
+
 <img width="317" height="243" alt="image" src="https://github.com/user-attachments/assets/a323914a-4729-457d-b5f5-fc5ee1e793ac" />
 
 I booted the affected desktop from the USB using the UEFI boot menu.
