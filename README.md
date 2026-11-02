@@ -156,7 +156,8 @@ This entry had been missing before, suggesting that reseating the SSD may have r
 
 The BIOS subsequently detected the Verbatim Vi3000 in the `M2_1` slot.
 
-<img width="755" height="547" alt="image" src="https://github.com/user-attachments/assets/a80a8fd4-d08c-457a-af1d-e82933a1c642" />
+<img width="942" height="392" alt="image" src="https://github.com/user-attachments/assets/b6deb03b-133d-4b23-9d06-101118d63270" />
+
 
 
 *Figure 9. BIOS subsequently detected the Verbatim NVMe drive in M2_1.*
