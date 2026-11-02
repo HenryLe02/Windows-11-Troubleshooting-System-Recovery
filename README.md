@@ -149,14 +149,16 @@ After reseating the NVMe SSD, I checked the boot menu again and confirmed that *
 
 This entry had been missing before, suggesting that reseating the SSD may have resolved a connection issue.
 
-<img width="850" height="402" alt="image" src="https://github.com/user-attachments/assets/44389821-8554-4731-bef0-d1655fa7658d" />
+<img width="942" height="392" alt="image" src="https://github.com/user-attachments/assets/eff6147c-0a89-4f3a-b2f5-332b1bdb9819" />
+
 
 
 *Figure 8. Windows Boot Manager appeared after reseating the NVMe SSD.*
 
 The BIOS subsequently detected the Verbatim Vi3000 in the `M2_1` slot.
 
-<img width="942" height="392" alt="image" src="https://github.com/user-attachments/assets/b6deb03b-133d-4b23-9d06-101118d63270" />
+<img width="928" height="607" alt="image" src="https://github.com/user-attachments/assets/50d3403b-9c60-4d23-bde2-4490ac7eef8b" />
+
 
 
 
