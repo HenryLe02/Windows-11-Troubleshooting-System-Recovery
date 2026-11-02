@@ -37,7 +37,9 @@ This raised concerns about possible malware infections or unwanted software that
 - The computer froze, restarted unexpectedly, and showed stop errors including `CRITICAL_PROCESS_DIED (0xEF)` and `DPC_WATCHDOG_VIOLATION (0x133)`.
 - Recovery attempts were inconsistent, so I checked whether the system drive was being detected.
 
-![Windows stop errors](images/figure-01.png)
+<img width="733" height="406" alt="image" src="https://github.com/user-attachments/assets/03556bef-e118-46d1-8462-f2da9a3c13f4" />
+
+<img width="900" height="330" alt="image" src="https://github.com/user-attachments/assets/67ca8195-eee0-4c11-ab2d-99cadc8d98d2" />
 
 *Figure 1. Windows stop errors captured during the troubleshooting process.*
 
@@ -65,11 +67,16 @@ The BIOS NVMe self-test also reported that no supported NVMe device was found.
 
 This raised a question about SSD detection, although it did not establish that the drive had failed.
 
-![Initial BIOS storage detection](images/figure-02.png)
+<img width="927" height="640" alt="image" src="https://github.com/user-attachments/assets/be65a743-2050-40d9-b6d4-a216f2f99a27" />
+
+<img width="812" height="646" alt="image" src="https://github.com/user-attachments/assets/facff172-3d6f-4945-803f-fb3edd1dded4" />
+
+<img width="582" height="345" alt="image" src="https://github.com/user-attachments/assets/55370f23-2984-4431-9fe4-32998c115c76" />
 
 *Figure 2. Initial BIOS storage screen: M2_1 was not detected.*
 
-![NVMe self-test](images/figure-03.png)
+<img width="456" height="357" alt="image" src="https://github.com/user-attachments/assets/1c9dd091-58fc-4448-ae1a-3bbc246b10a4" />
+
 
 *Figure 3. NVMe self-test could not find a supported device.*
 
@@ -78,6 +85,7 @@ This raised a question about SSD detection, although it did not establish that t
 ## 3. Create Recovery Media and Check the Disk
 
 Using another computer, I downloaded Microsoft's official Windows 11 installation media tool and prepared a bootable USB drive.
+<img width="317" height="243" alt="image" src="https://github.com/user-attachments/assets/a323914a-4729-457d-b5f5-fc5ee1e793ac" />
 
 I booted the affected desktop from the USB using the UEFI boot menu.
 
@@ -85,11 +93,13 @@ I booted the affected desktop from the USB using the UEFI boot menu.
 
 https://www.microsoft.com/software-download/windows11
 
-![Windows 11 installation media](images/figure-04.png)
+<img width="925" height="640" alt="image" src="https://github.com/user-attachments/assets/c4497919-0ea6-4674-b9a3-bdddb4e8eaa4" />
 
 *Figure 4. Official Windows 11 download page used to prepare installation media.*
 
-![USB boot menu](images/figure-05.png)
+<img width="618" height="232" alt="image" src="https://github.com/user-attachments/assets/3fcae57c-6c2e-4fae-aa98-56bb1499efbd" />
+<img width="832" height="472" alt="image" src="https://github.com/user-attachments/assets/6f0a941b-dbf2-4d55-bfcc-119c617437ba" />
+
 
 *Figure 5. Selecting the USB drive in the boot menu.*
 
@@ -110,7 +120,8 @@ At that point, the only visible disk was the approximately 28 GB ESD-USB install
 
 The internal SSD was not listed, which supported the need for a physical connection check.
 
-![DiskPart results](images/figure-06.png)
+<img width="677" height="490" alt="image" src="https://github.com/user-attachments/assets/2d1e8f98-c94f-4fe8-b9fa-bda91d8e4310" />
+
 
 *Figure 6. DiskPart initially showed the USB installer but not the internal SSD.*
 
@@ -122,11 +133,12 @@ Since the SSD was not consistently detected in BIOS, I decided to check its phys
 
 I completely shut down the computer, disconnected the power cable, and opened the PC case.
 
-I located the **Verbatim Vi3000 1TB M.2 NVMe SSD** on the motherboard, carefully removed it, and securely reinstalled it into the M.2 slot.
+I located the Verbatim Vi3000 1TB M.2 NVMe SSD on the motherboard and carefully inspected the SSD and M.2 slot for any visible signs of physical damage. After confirming there was no obvious damage, I removed the SSD and securely reinstalled it into the M.2 slot.
 
 After reconnecting the power and turning the computer back on, I entered BIOS and checked whether the SSD was detected.
 
-![NVMe SSD inspection](images/figure-07.png)
+<img width="561" height="500" alt="image" src="https://github.com/user-attachments/assets/7cec6b47-cf2f-4365-a3d5-8d701bd7d3ec" />
+
 
 *Figure 7. Verbatim Vi3000 M.2 NVMe SSD during the physical inspection.*
 
@@ -136,13 +148,15 @@ After reseating the NVMe SSD, I checked the boot menu again and confirmed that *
 
 This entry had been missing before, suggesting that reseating the SSD may have resolved a connection issue.
 
-![Windows Boot Manager detected](images/figure-08.png)
+<img width="850" height="402" alt="image" src="https://github.com/user-attachments/assets/44389821-8554-4731-bef0-d1655fa7658d" />
+
 
 *Figure 8. Windows Boot Manager appeared after reseating the NVMe SSD.*
 
 The BIOS subsequently detected the Verbatim Vi3000 in the `M2_1` slot.
 
-![SSD detected in BIOS](images/figure-09.png)
+<img width="755" height="547" alt="image" src="https://github.com/user-attachments/assets/a80a8fd4-d08c-457a-af1d-e82933a1c642" />
+
 
 *Figure 9. BIOS subsequently detected the Verbatim NVMe drive in M2_1.*
 
@@ -158,7 +172,8 @@ With the SSD visible again, I attempted to start the existing Windows installati
 
 The PC could boot into Windows briefly, but freezing and stop errors continued.
 
-![Windows stop error](images/figure-10.png)
+<img width="576" height="377" alt="image" src="https://github.com/user-attachments/assets/d4728cab-9410-4598-822c-779246a788ea" />
+
 
 *Figure 10. A further stop error occurred after the SSD became detectable again.*
 
@@ -172,7 +187,7 @@ Despite restarting the computer more than ten times, the same freezing issue con
 
 This made the situation more serious, as I could no longer access Windows or use its built-in recovery tools to troubleshoot the problem.
 
-![Windows Recovery Environment](images/figure-11.png)
+<img width="581" height="423" alt="image" src="https://github.com/user-attachments/assets/822b32d9-3c06-41d1-917e-8648477a3c5c" />
 
 *Figure 11. Windows Recovery Environment was accessed, but recovery did not resolve the instability.*
 
@@ -199,11 +214,13 @@ I left the USB installation drive untouched.
 
 **Important:** Deleting partitions removes existing data. I confirmed the correct installation target and obtained the user's permission before proceeding.
 
-![Windows installation partitions](images/figure-12.png)
+<img width="712" height="527" alt="image" src="https://github.com/user-attachments/assets/5a6d229f-5c8a-4702-a507-018a156efa61" />
+
 
 *Figure 12. Identifying the internal Windows partitions separately from the ESD-USB installer.*
 
-![Unallocated SSD space](images/figure-13.png)
+<img width="875" height="513" alt="image" src="https://github.com/user-attachments/assets/6dd189c0-fb93-460e-a402-a80b96b9339f" />
+
 
 *Figure 13. Selecting unallocated space on the internal SSD for the clean installation.*
 
@@ -211,13 +228,15 @@ I left the USB installation drive untouched.
 
 I selected the unallocated space and continued with Windows 11 installation.
 
-![Windows 11 installation](images/figure-14.png)
+<img width="690" height="377" alt="image" src="https://github.com/user-attachments/assets/9dfd37c3-9cf4-41a8-8d71-edfdb7fbc4c6" />
+
 
 *Figure 14. Windows 11 installation in progress.*
 
 Once installation finished, I completed the initial Windows setup and confirmed the desktop could load.
 
-![Windows 11 setup completed](images/figure-15.png)
+<img width="865" height="537" alt="image" src="https://github.com/user-attachments/assets/826f3053-e51a-43be-9b96-dc7980a88af9" />
+
 
 *Figure 15. Windows 11 initial setup completed.*
 
@@ -245,7 +264,7 @@ This confirmed that Windows currently reported the SSD as healthy and operationa
 
 However, this was not a full SSD diagnostic and did not guarantee that an intermittent fault could not recur.
 
-![PowerShell SSD health check](images/figure-16.png)
+<img width="846" height="426" alt="image" src="https://github.com/user-attachments/assets/8b4b519d-1e0e-4d63-bd39-1b98ef40b81a" />
 
 *Figure 16. PowerShell storage health check (the corrected command succeeded).*
 
@@ -263,11 +282,14 @@ I selected the option to restart the computer and check for problems.
 
 Windows restarted and launched the memory diagnostic tool.
 
-![Windows Memory Diagnostic](images/figure-17.png)
+<img width="718" height="387" alt="image" src="https://github.com/user-attachments/assets/29108d06-75cd-4043-9223-5103e3803150" />
+
+<img width="661" height="482" alt="image" src="https://github.com/user-attachments/assets/33dbf27c-f0c8-4225-8b9e-57ff6173942c" />
+
 
 *Figure 17. Windows Memory Diagnostic running.*
 
-The diagnostic process was captured, but I did not capture a verified final result. Therefore, I have not claimed that the RAM passed the test.
+After the Windows Memory Diagnostic test finished, the computer automatically restarted and booted into Windows without displaying the final test results. No errors were reported during the portion of the test I observed.
 
 ---
 
@@ -289,7 +311,7 @@ OneDrive eventually displayed:
 
 This confirmed that OneDrive was connected and reported successful synchronisation at that time.
 
-![OneDrive synchronisation](images/figure-18.png)
+<img width="781" height="482" alt="image" src="https://github.com/user-attachments/assets/5fc9003e-22ee-4c43-b10f-fdc8525358ce" />
 
 *Figure 18. OneDrive and application configuration during post-installation setup.*
 
@@ -301,7 +323,7 @@ As the final configuration step, I opened:
 
 I checked for available Windows system and security updates.
 
-![Windows Update](images/figure-19.png)
+<img width="792" height="510" alt="image" src="https://github.com/user-attachments/assets/f29cc39a-dad6-4dbe-b02e-d7b3d56231ea" />
 
 *Figure 19. Windows Update check during final configuration.*
 
