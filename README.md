@@ -67,7 +67,8 @@ The BIOS NVMe self-test also reported that no supported NVMe device was found.
 
 This raised a question about SSD detection, although it did not establish that the drive had failed.
 
-<img width="927" height="640" alt="image" src="https://github.com/user-attachments/assets/be65a743-2050-40d9-b6d4-a216f2f99a27" />
+<img width="870" height="622" alt="image" src="https://github.com/user-attachments/assets/fbf90bb9-e274-4fb0-b3e6-e25851905528" />
+
 
 <img width="812" height="646" alt="image" src="https://github.com/user-attachments/assets/facff172-3d6f-4945-803f-fb3edd1dded4" />
 
@@ -189,7 +190,7 @@ Neither the mouse nor the Tab key worked, preventing me from selecting any recov
 
 Despite restarting the computer more than ten times, the same freezing issue continued to occur.
 
-This made the situation more serious, as I could no longer access Windows or use its built-in recovery tools to troubleshoot the problem.
+This made troubleshooting more challenging, as the system frequently froze before I could complete the recovery process, preventing me from reliably accessing Windows or using its built-in recovery tools.
 
 <img width="581" height="423" alt="image" src="https://github.com/user-attachments/assets/822b32d9-3c06-41d1-917e-8648477a3c5c" />
 
